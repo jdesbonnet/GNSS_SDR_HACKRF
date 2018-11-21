@@ -1,6 +1,8 @@
 # GNSS_SDR_HACKRF
 
-Experiments in getting GNSS-SDR working with the HackRF One SDR. Summary: while all the hardware seems to be working, there is no evidence of the reception of any kind of GPS L1 signal. The antenna is known to be good. The config file is from the documentation (the HackRF example). So that leaves the HackRF which seems to work superficially (eg gqrx shows signals where I expect them). 
+Experiments in getting GNSS-SDR working with the HackRF One SDR. Summary: while all the hardware seems to be working, there is no evidence of the reception of any kind of GPS L1 signal. The antenna is known to be good. The config file is from the documentation (the HackRF example). So that leaves the HackRF which *seems* to work (eg gqrx shows signals where I expect them). 
+
+What next? Test the HackRF thoroughly. Can I receve ADS-B on 1090MHz? Maybe decode cell network signals.
 
 ## Equipment:
 
@@ -118,3 +120,18 @@ Current input signal time = 9 [s]
 ```
 
 (this goes on... no other type of message is displayed, even after 20 minutes +)
+
+
+# Testing HackRF 
+
+hackrf_info
+
+```
+hackrf_info version: unknown
+libhackrf version: unknown (0.5)
+Found HackRF
+Index: 0
+Board ID Number: 2 (HackRF One)
+Firmware Version: 2014.08.1 (API:1.00)
+Part ID Number: 0xa000cb3c 0x004f4759
+```
