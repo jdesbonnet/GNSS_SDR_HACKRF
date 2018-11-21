@@ -1,6 +1,6 @@
 # GNSS_SDR_HACKRF
 
-Experiments in getting GNSS-SDR working with the HackRF One SDR
+Experiments in getting GNSS-SDR working with the HackRF One SDR. Summary: while all the hardware seems to be working, there is no evidence of the reception of any kind of GPS L1 signal. The antenna is known to be good. The config file is from the documentation (the HackRF example). So that leaves the HackRF which seems to work superficially (eg gqrx shows signals where I expect them). 
 
 ## Equipment:
 
