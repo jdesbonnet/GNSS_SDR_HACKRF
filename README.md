@@ -1,6 +1,6 @@
 # GNSS_SDR_HACKRF
 
-Experiments in getting GNSS-SDR working with the HackRF One SDR. Summary: while all the hardware seems to be working, there is no evidence of the reception of any kind of GPS L1 signal. The antenna is known to be good. The config file is from the documentation (the HackRF example). So that leaves the HackRF which *seems* to work (eg gqrx shows signals where I expect them). 
+Experiments in getting GNSS-SDR working with the HackRF One SDR. Summary: while all the hardware seems to be working, there is no evidence of the reception of any kind of GPS L1 signal. The antenna is known to be good. The config file is from the documentation (the HackRF example). So that leaves the HackRF which *seems* to work (eg gqrx shows signals where I expect them). I have also verified that there is a 3.22V DC bias on the antenna port when running gnss-sdr.
 
 What next? Test the HackRF thoroughly. Can I receve ADS-B on 1090MHz? Maybe decode cell network signals.
 
@@ -134,4 +134,31 @@ Index: 0
 Board ID Number: 2 (HackRF One)
 Firmware Version: 2014.08.1 (API:1.00)
 Part ID Number: 0xa000cb3c 0x004f4759
+```
+
+Using kalibrate-hackrf:
+
+./src/kal -s GSM900
+
+```
+joe@joe-Precision-T1650:/var/tmp/gnss-sdr/kalibrate-hackrf$ ./src/kal  -s GSM900
+kal: Scanning for GSM-900 base stations.
+GSM-900:
+	chan:   52 (945.4MHz + 39.593kHz)	power: 1001135.09
+	chan:   53 (945.6MHz + 14.702kHz)	power: 1072053.73
+	chan:   54 (945.8MHz - 2.277kHz)	power: 1008929.00
+	chan:   55 (946.0MHz - 35.274kHz)	power: 1045148.52
+	chan:  104 (955.8MHz - 2.281kHz)	power:  689166.83
+^C
+joe@joe-Precision-T1650:/var/tmp/gnss-sdr/kalibrate-hackrf$ ./src/kal  -s GSM900
+kal: Scanning for GSM-900 base stations.
+GSM-900:
+	chan:   52 (945.4MHz + 39.590kHz)	power: 2140210.84
+	chan:   53 (945.6MHz + 39.715kHz)	power: 2291843.19
+	chan:   54 (945.8MHz - 10.295kHz)	power: 2407921.34
+	chan:   55 (946.0MHz - 35.301kHz)	power: 2528721.18
+	chan:  104 (955.8MHz + 14.691kHz)	power: 1362716.30
+	chan:  119 (958.8MHz + 6.901kHz)	power: 1329559.36
+	chan:  120 (959.0MHz - 24.528kHz)	power: 1484227.81
+
 ```
