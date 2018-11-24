@@ -162,3 +162,27 @@ GSM-900:
 	chan:  120 (959.0MHz - 24.528kHz)	power: 1484227.81
 
 ```
+
+HackRF device also confirmed to work with Dump1090 using simple telescopic antenna.
+
+```
+
+*a8000a80fb133f06c00421e05c20;
+CRC: e05c20 (ok)
+DF 21: Comm-B, Identity Reply.
+  Flight Status  : Normal, Airborne
+  DR             : 0
+  UM             : 0
+  Squawk         : 7000
+  ICAO Address   : 4ca70d
+
+*a8000a8000000030a40000fb7e68;
+CRC: fb7e68 (ok)
+DF 21: Comm-B, Identity Reply.
+  Flight Status  : Normal, Airborne
+  DR             : 0
+  UM             : 0
+  Squawk         : 7000
+  ICAO Address   : 4ca70d
+
+```
