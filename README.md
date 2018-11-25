@@ -1,8 +1,8 @@
 # GNSS_SDR_HACKRF
 
-Experiments in getting GNSS-SDR working with the HackRF One SDR. Summary: while all the hardware seems to be working, there is no evidence of the reception of any kind of GPS L1 signal. The antenna is known to be good. The config file is from the documentation (the HackRF example). So that leaves the HackRF which *seems* to work (eg gqrx shows signals where I expect them). I have also verified that there is a 3.22V DC bias on the antenna port when running gnss-sdr.
+Experiments in getting GNSS-SDR working with the HackRF One SDR. Summary: while all the hardware seems to be working, there is no evidence of the reception of any kind of GPS L1 signal. The GNSS antenna is known to work in regular positioning and RTK modes. The config file is from the documentation (the HackRF example). So that leaves the HackRF which *seems* to work (eg gqrx shows signals where I expect them, Dump1090 works, kalibrate reports GSM channels). I have also verified that there is a 3.22V DC bias on the antenna port when running gnss-sdr.
 
-What next? Test the HackRF thoroughly. Can I receve ADS-B on 1090MHz? Maybe decode cell network signals.
+What to check next??
 
 ## Equipment:
 
@@ -17,6 +17,7 @@ What next? Test the HackRF thoroughly. Can I receve ADS-B on 1090MHz? Maybe deco
 
 ## Configuration:
 
+See conf files in repository.
 
 
 ## Results to date
