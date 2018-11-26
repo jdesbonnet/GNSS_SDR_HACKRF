@@ -5,6 +5,8 @@ Experiments in getting GNSS-SDR working with the HackRF One SDR.
 Summary: while all the hardware seems to be working, there is no evidence of the reception of any kind of GPS L1 signal. The GNSS antenna is known to work in regular positioning and RTK modes. The config file is from the documentation (the HackRF example). So that leaves the HackRF which *seems* to work (eg gqrx shows signals where I expect them, Dump1090 works, kalibrate reports GSM channels). I have also verified that there is a 3.22V DC bias on the antenna port when running gnss-sdr.  While running, file 'observables.dat' grows in the working directory, but it compresses to 0.1% with gzip: all zeros. So it's not getting any ADC data. 
 
 What to check next??
+ * Check that M8P uses 3.3V bias (almost certain it does)... maybe my antennas DC bias needs to be higher. 
+ * Capture signal using hackrf_transfer tool, compare with examples and attempt to post-process.
 
 ## Equipment:
 
